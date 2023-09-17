@@ -3,16 +3,14 @@ package ru.netology.stats;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class StatsServiceTest {
     @Test
     public void TestSum() {
         StatsService service = new StatsService();
-    long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-    long actual = service.sum(sales);
-    long expected = 8+ 15+ 13+ 15+ 17+ 20+ 19+ 20+ 7+ 14+ 14+ 18;
+        long actual = service.sum(sales);
+        long expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -23,10 +21,11 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.average(sales);
-        long expected = (8+ 15+ 13+ 15+ 17+ 20+ 19+ 20+ 7+ 14+ 14+ 18) / 12;
+        long expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void TestMaximum() {
         StatsService service = new StatsService();
@@ -37,6 +36,7 @@ class StatsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void TestMinimum() {
         StatsService service = new StatsService();
@@ -47,6 +47,7 @@ class StatsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void TestBellowAverage() {
         StatsService service = new StatsService();
@@ -57,6 +58,7 @@ class StatsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void TestBellAverage() {
         StatsService service = new StatsService();

@@ -32,6 +32,7 @@ public class StatsService {
         }
         return monthMinSale + 1;
     }
+
     public int monthBellowAverage(long[] sales) {
         int counter = 0;
         long averageSale = average(sales);
@@ -43,6 +44,7 @@ public class StatsService {
         }
         return counter;
     }
+
     public int monthBellAverage(long[] sales) {
         int counter = 0;
         long averageSale = average(sales);
